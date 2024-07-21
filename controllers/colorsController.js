@@ -40,7 +40,7 @@ colors.delete('/:id', async (req, res) => {
   if (deletedColor.id) {
     res.json(deletedColor)
   } else {
-    res.status(200).json({ id })
+    res.status(404).json({error: `No color wth the id ${id} exists`})
   }
 })
 
